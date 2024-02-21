@@ -19,6 +19,14 @@
   ],
   "author": "Bankole Emmanuel",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithdripzy/validity-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codewithdripzy/validity-js/issues"
+  },
+  "homepage": "https://github.com/codewithdripzy/validity-js#readme",
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.11.19",
