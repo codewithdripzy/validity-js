@@ -1,7 +1,8 @@
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
+import { PasswordType, ValidatorType } from "./global/interfaces";
 
-class Validator{
-    static isEmail(email : string) : boolean{
+class Validator implements ValidatorType{
+    isEmail(email : string) : boolean{
         const pattern = /([A-Za-z])\w+@((gmail)|(outlook)|(yahoo)|(hotmail)|(icloud)|(me)|(aol)|(protonmail)|(yandex)|(zoho))\.(com)/
         
         if(email.match(pattern)){
@@ -11,7 +12,7 @@ class Validator{
         return false;
     }
 
-    static isValidPassword(password : string) : boolean{
+    isValidPassword(password : string) : boolean{
         const pattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
         
         if(password.match(pattern)){
@@ -22,20 +23,23 @@ class Validator{
     }
 }
 
-class Password{
-    static hash(password : string) : string{
+class Password implements PasswordType {
+    hash(password : string) : string{
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(password, salt);
 
         return hash;
     }
 
-    static verify(password : string, hash : string) : boolean{
+    verify(password : string, hash : string) : boolean{
         const validity = bcrypt.compareSync(password, hash);
 
         return validity;
     }
 }
 
-export default Validator;
-export { Password };
+const validator = new Validator();
+const password = new Validator();
+
+
+export { validator, password, Validator, Password };

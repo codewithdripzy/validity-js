@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "module": "commonjs",
+        "types": ["node", "@types/bcrypt"],
+        "outDir": "./dist/"
+    },
+    "include": ["./src/**/*.ts"],
+    "files": ["./src/index.ts"]
+}

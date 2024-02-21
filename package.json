@@ -1,10 +1,13 @@
 {
-  "name": "validity-js",
-  "version": "1.0.0",
+  "name": "auth-validity", 
+  "version": "1.0.2",
+  "type": "commonjs",
   "description": "Your go-to JavaScript package for hassle-free form validation. Simplify error-checking, enhance user experience, and make your forms shine effortlessly.",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "'ts-node' src/tests/app.test.ts",
+    "build": "tsc -p ./tsconfig.json",
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
   },
   "keywords": [
