@@ -8,4 +8,8 @@ interface PasswordType{
     verify(password : string, hash : string) : boolean
 }
 
-export type { ValidatorType, PasswordType };
+interface ValidatorOptions{
+    minLength : number
+}
+
+export type { ValidatorType, PasswordType, ValidatorOptions };

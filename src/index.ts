@@ -1,5 +1,5 @@
 import * as bcrypt from "bcrypt";
-import { PasswordType, ValidatorType } from "./global/interfaces";
+import { PasswordType, ValidatorOptions, ValidatorType } from "./global/interfaces";
 
 /**
  * @module auth-validify
@@ -47,15 +47,13 @@ class Validator implements ValidatorType{
      * @throws {TypeError} If the password is not a string.
      * @throws {InvalidPasswordError} If the password format is invalid.
      */
-    isValidPassword(password : string) : boolean{
-        const pattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
-        
-        if(password.match(pattern)){
-            return true;
-        }
-
-        return false;
+    isValidPassword(password : string, options: ValidatorOptions = { minLength: 8 }): boolean {
+        const { minLength } = options;
+        const pattern = new RegExp(`^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{${minLength},16}$`);
+    
+        return pattern.test(password);
     }
+    
 
     isValidPhoneNumber(phoneNumber : string) : boolean{
         const pattern = /^(\+?[\d{1,3}\s]?-\?)?\(?([0-9]{2,5})\)?[- \.]?([0-9]{3})[- \.]?([0-9]{4})$/
