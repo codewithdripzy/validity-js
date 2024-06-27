@@ -1,4 +1,4 @@
-Auth Valdify: Powerful and Customizable Validation for Node.js
+# Auth Valdify: Powerful and Customizable Validation for Node.js
 
 [![npm version](https://badge.fury.io/js/auth-validify.svg)](https://www.npmjs.com/package/auth-validify)
 
