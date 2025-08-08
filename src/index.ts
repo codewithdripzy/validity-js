@@ -101,6 +101,23 @@ class Password implements PasswordType {
     }
 }
 
+/**
+ * @class Authenticator
+ */
+
+class Authenticator{
+    /**
+     * Create easy and effective authentication process for applications.
+     *
+     * @param {string} password - The password to hash.
+     * @returns {Promise<string>} A promise that resolves with the hashed password.
+     *
+     * @throws {TypeError} If the password is not a string.
+     */
+
+    
+
+}
 const validator = new Validator();
 const password = new Validator();
 

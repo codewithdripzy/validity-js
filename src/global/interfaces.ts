@@ -8,8 +8,18 @@ interface PasswordType{
     verify(password : string, hash : string) : boolean
 }
 
+interface AuthenticatorType{
+
+}
 interface ValidatorOptions{
     minLength : number
 }
 
-export type { ValidatorType, PasswordType, ValidatorOptions };
+// interface FieldsType{
+//     email : EmailField;
+//     password : PasswordField;
+//     tel : TelephoneField;
+// }
+
+
+export type { ValidatorType, PasswordType, ValidatorOptions, AuthenticatorType };
