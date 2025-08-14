@@ -1,6 +1,6 @@
 {
   "name": "auth-validify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "commonjs",
   "description": "Your go-to JavaScript package for hassle-free form validation. Simplify error-checking, enhance user experience, and make your forms shine effortlessly.",
   "main": "./dist/index.js",
@@ -32,7 +32,7 @@
   "homepage": "https://github.com/codewithdripzy/validity-js#readme",
   "dependencies": {
     "@types/bcrypt": "^6.0.0",
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.2.1",
     "bcrypt": "^6.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
