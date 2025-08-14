@@ -1,10 +1,26 @@
 {
-    "compilerOptions": {
-        "declaration": true,
-        "module": "commonjs",
-        "types": ["node", "@types/bcrypt"],
-        "outDir": "./dist/"
-    },
-    "include": ["./src/**/*.ts"],
-    "files": ["./src/index.ts"]
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": false,
+    "moduleResolution": "node",
+    "target": "ES2019",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*"],
+  "files": ["./src/index.ts"]
 }
+
+// {
+//     "compilerOptions": {
+//         "declaration": true,
+//         "module": "commonjs",
+//         "types": ["node", "@types/bcrypt"],
+//         "outDir": "./dist/"
+//     },
+//     "include": ["./src/**/*.ts"],
+// }
