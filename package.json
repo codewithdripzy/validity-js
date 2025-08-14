@@ -1,6 +1,6 @@
 {
   "name": "auth-validify",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "commonjs",
   "description": "Your go-to JavaScript package for hassle-free form validation. Simplify error-checking, enhance user experience, and make your forms shine effortlessly.",
   "main": "./dist/index.js",
